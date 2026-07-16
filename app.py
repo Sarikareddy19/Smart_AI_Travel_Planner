@@ -1,3 +1,4 @@
+import os
 import gradio as gr
 from backend.services.image_service import get_place_image
 from backend.controller import generate_complete_trip
@@ -340,4 +341,7 @@ with gr.Blocks(
 ]
     )
 
-app.launch(share=True)
+app.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.environ.get("PORT", 7860))
+)
