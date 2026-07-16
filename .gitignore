@@ -1,0 +1,4 @@
+.env
+travel_report.pdf
+__pycache__/
+*.pyc
