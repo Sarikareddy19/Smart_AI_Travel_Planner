@@ -1,6 +1,5 @@
 import os
 import gradio as gr
-from backend.services.image_service import get_place_image
 from backend.controller import generate_complete_trip
 from frontend.pages.dashboard_page import create_dashboard_page
 

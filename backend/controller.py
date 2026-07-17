@@ -1,5 +1,5 @@
 from agents.planner_agent import planner_agent
-from backend.utils.pdf_generator import generate_pdf
+
 
 
 def generate_complete_trip(
@@ -28,16 +28,6 @@ def generate_complete_trip(
     attractions = get_section(result, "TOP_ATTRACTIONS")
     packing = get_section(result, "PACKING")
 
-    # Generate PDF
-    pdf_path = generate_pdf(
-        destination,
-        hotels,
-        weather,
-        budget_data,
-        food,
-        itinerary,
-        attractions,
-        packing
-    )
+    
 
     return result
