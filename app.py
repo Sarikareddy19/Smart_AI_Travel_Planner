@@ -152,7 +152,7 @@ with gr.Blocks(
         primary_hue="blue",
         secondary_hue="orange"
     )
-) as demo:
+) as app:
 
     # ---------------- HOME ----------------
 
@@ -340,9 +340,10 @@ with gr.Blocks(
 ]
     )
 
-demo.queue()
 
-demo.launch(
-    server_name="0.0.0.0",
+app.queue()
+
+app.launch(
+    server_name="127.0.0.1",
     server_port=int(os.environ.get("PORT", 7860))
 )
